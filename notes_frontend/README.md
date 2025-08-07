@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project for a Minimal Notes CRUD Application.
+
+---
+
+## How to Integrate with Backend
+
+By default, the app uses mock in-memory data for all notes actions.  
+To connect with your real backend (e.g., a REST/GraphQL API for `notes_database`):
+
+1. Set your backend endpoint in a `.env` file, using the example in `.env.example`:
+   ```
+   NEXT_PUBLIC_BACKEND_API_URL=https://your-backend-url.com/api
+   ```
+2. Replace the mock data and CRUD logic in `/src/app/page.tsx` with your real API calls.
+   - Calls to `setNotes`, `handleCreate`, `handleUpdate`, `handleDelete` are the places to integrate async requests.
+
+---
 
 ## Getting Started
 
